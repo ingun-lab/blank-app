@@ -7,6 +7,9 @@ import ast
 try:
     import streamlit as st
     openai.api_key = st.secrets["OPENAI_API_KEY"]
+except:
+    pass  # Or raise an error/log if you're not running in Streamlit
+
 
 # --- Cleaning Utilities ---
 def clean_encoding(text):
