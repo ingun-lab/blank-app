@@ -108,6 +108,11 @@ with st.sidebar:
         st.cache_resource.clear()
         st.rerun()
 
+st.sidebar.info(
+    "💡 Need help with your queries? [Open the quick guide](https://docs.google.com/document/d/1XW03wkOXMojV_sJYhkTFk4gxtl0j7uZyWbaD2fJz_8c/edit?tab=t.0)",
+    icon="❓"
+)
+
 # ⬇️ Use the new loader (not load_cached_data)
 df = load_dataset()
 
