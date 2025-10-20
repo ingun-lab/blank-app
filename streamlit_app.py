@@ -123,7 +123,7 @@ if missing:
     st.error(f"Your CSV is missing required columns: {missing}")
 else:
     query = st.text_input(
-        "This tool uses OpenAI’s text-embedding-3-large model to process natural-language queries and return the most relevant memos."
+        "Enter your query here (e.g. policy recommendations focused on the department of energy)"
     )
     if query:
         with st.spinner("Searching..."):
