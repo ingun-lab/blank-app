@@ -1,4 +1,7 @@
-streamlit
-openai
+openai>=1.0.0
+python-dotenv>=1.0.0
+streamlit>=1.30
 pandas
 numpy
+gdown
+pyarrow
