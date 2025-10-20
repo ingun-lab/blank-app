@@ -11,6 +11,26 @@ from query_engine import search  # <-- no need to import load_data anymore
 st.set_page_config(page_title="🔍 Policy Memo Search", layout="wide")
 st.title("🔍 Policy Navigator (Beta)")
 
+# --- 👇 Add Expander ---
+st.subheader("Search across hundreds of policy memos by topic, concept, or agency.")
+
+with st.expander("ℹ️ About this app", expanded=True):
+    st.markdown("""
+**Policy Navigator (Beta)** is an experimental semantic search tool built by the **D1 Team** 
+to help surface insights from our internal library of policy memos and publications.
+
+This app uses **OpenAI’s `text-embedding-3-large` model** to process natural-language queries and return 
+the most relevant memos based on meaning, not just keywords.
+
+- 🧭 **How to use:** Type a topic, agency, or concept (e.g., *federal research capacity*, *DOE innovation programs*, *climate and health impacts*).
+- ⚙️ **How it works:** Your query is embedded into vector space and compared against precomputed memo embeddings using cosine similarity.
+- 🗂️ **Data size:** ~3,400 publications embedded with OpenAI and cached for fast multi-user search.
+- 🌐 **Source:** FAS Salesforce Publication Repository.
+- 🧠 **Maintainer:** Day One Team.
+
+For questions or feedback, contact: [ingun@fas.org](mailto:ingun@fas.org)
+""")
+    
 # ---- Google Drive config (make sure file is 'Anyone with the link -> Viewer')
 FILE_ID = "1HUARJzdDRnNCnEriJ9iFjL4_1_TcM12W"
 GDRIVE_URL = f"https://drive.google.com/uc?id={FILE_ID}"
